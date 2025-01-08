@@ -80,4 +80,18 @@ def play_game():
         current_player = "O" if current_player == "X" else "X"
 
 
-play_game()
+# Основной цикл для повторной игры
+while True:
+    play_game()  # Вызов функции игры
+
+    while True:
+        replay = input("Хотите сыграть снова? Введите 'да' или 'нет': ").strip().lower()
+
+        if replay == 'да':
+            print("Вы выбрали сыграть снова.")
+            break
+        elif replay == 'нет':
+            print("Спасибо за игру!")
+            exit()
+        else:
+            print("Пожалуйста, введите 'да' или 'нет'.")
